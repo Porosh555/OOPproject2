@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="411.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="all.oopproject.poros.U1g4">
+   <children>
+      <Label fx:id="HandleEmergencyReroutingl" layoutX="205.0" layoutY="40.0" text="Handle Emergency Rerouting" />
+      <Label fx:id="AlternateRoutesl" layoutX="37.0" layoutY="49.0" text="Alternate Routes" />
+      <Button layoutX="72.0" layoutY="98.0" mnemonicParsing="false" onAction="#SelectBestRouteonactionb" text="Select Best Route" />
+      <TableView layoutX="37.0" layoutY="150.0" prefHeight="200.0" prefWidth="225.0">
+        <columns>
+          <TableColumn fx:id="RouteIDtc" prefWidth="75.0" text="Route ID" />
+          <TableColumn fx:id="Distancetc" prefWidth="75.0" text="Distance" />
+            <TableColumn fx:id="EstimatedTimetc" prefWidth="75.0" text="Estimated Time" />
+        </columns>
+      </TableView>
+      <Button layoutX="235.0" layoutY="98.0" mnemonicParsing="false" onAction="#UpdateDriverRouteonaction" text="Update Driver Route" />
+      <Label fx:id="logsaveconfirmationl" layoutX="123.0" layoutY="369.0" text="log save confirmation" />
+      <TableView layoutX="332.0" layoutY="144.0" prefHeight="200.0" prefWidth="226.0">
+        <columns>
+          <TableColumn fx:id="timetc" prefWidth="75.0" text="Time" />
+          <TableColumn fx:id="orderidtc" prefWidth="75.0" text="Order ID" />
+            <TableColumn fx:id="detailtc" prefWidth="75.0" text="Detail" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

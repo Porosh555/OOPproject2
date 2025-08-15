@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="CommunicatewithCustomersL" prefHeight="588.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="all.oopproject.poros.U1G7">
+   <children>
+      <Label layoutX="131.0" layoutY="14.0" text="Communicate with Customers" textFill="#2323cf">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="PendingDeliveriesL" layoutX="54.0" layoutY="66.0" text="&quot;Pending Deliveries&quot;" />
+      <Button layoutX="54.0" layoutY="95.0" mnemonicParsing="false" onAction="#CustomerCommunicationONC" text="Customer Communication" textFill="#51c72a" />
+      <Button layoutX="330.0" layoutY="387.0" mnemonicParsing="false" onAction="#SaveCommunicationHistoryONC" text="Save Communication History" textFill="#ac3333" />
+      <TableView fx:id="pendingCustomersTableTC" layoutX="97.0" layoutY="134.0" prefHeight="200.0" prefWidth="426.0">
+        <columns>
+          <TableColumn fx:id="CustomerIDTC" prefWidth="75.0" text="Customer ID" />
+          <TableColumn fx:id="CustomerNameTC" prefWidth="114.4000244140625" text="Customer Name" />
+            <TableColumn fx:id="DeliveryStatusTC" prefWidth="98.4000244140625" text="Order ID" />
+            <TableColumn fx:id="CustomerIDTC1" prefWidth="109.5999755859375" text="Delivery Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="330.0" layoutY="354.0" mnemonicParsing="false" onAction="#SendScheduleUpdateONC" text="Send Schedule Update" textFill="#2a8c2f" />
+      <Label fx:id="statusmessageL" layoutX="435.0" layoutY="58.0" text="status message" />
+      <Label fx:id="customerResponseLabel" layoutX="70.0" layoutY="349.0" text="Customer Response" />
+      <TextArea fx:id="customerResponseTextArea" layoutX="34.0" layoutY="367.0" prefHeight="200.0" prefWidth="200.0" text="record response" />
+      <Label fx:id="communicationStatusLabel" layoutX="345.0" layoutY="429.0" text="confirmation/status message" textFill="#e14c4c" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="all.oopproject.poros.U1g6">
+   <children>
+      <Label fx:id="PrepareDailyDeliveryReportsL" layoutX="79.0" layoutY="24.0" text="Prepare Daily Delivery Reports" />
+      <Button layoutX="288.0" layoutY="29.0" mnemonicParsing="false" onAction="#GenerateDailyReportONB" text="&quot;Generate Daily Report" />
+      <Label fx:id="completedDeliveriesLabelL" layoutX="72.0" layoutY="57.0" text="completedDeliveriesLabel" />
+      <TableView fx:id="completedDeliveriesTableTC" layoutX="34.0" layoutY="158.0" prefHeight="200.0" prefWidth="303.0">
+        <columns>
+          <TableColumn fx:id="DeliveryIDTC" prefWidth="75.0" text="Delivery ID" />
+          <TableColumn fx:id="DestinationTC" prefWidth="75.0" text="Destination" />
+            <TableColumn fx:id="DeliveryTimeTC" prefWidth="75.0" text="Delivery Time" />
+            <TableColumn fx:id="STATUSTC" prefWidth="75.0" text="STATUS" />
+        </columns>
+      </TableView>
+      <Button layoutX="288.0" layoutY="75.0" mnemonicParsing="false" onAction="#CompilePDFReportONB" text="Compile PDF Report" />
+      <Button layoutX="435.0" layoutY="75.0" mnemonicParsing="false" onAction="#EmailtoManagementONB" text="Email to Management" />
+      <Button layoutX="443.0" layoutY="29.0" mnemonicParsing="false" onAction="#SaveReportONB" text="&quot;Save Report" />
+      <Label fx:id="confirmationL" layoutX="370.0" layoutY="122.0" text="confirmation" />
+      <Label fx:id="ReportPreviewReportPreviewL" layoutX="370.0" layoutY="149.0" text="Report PreviewReport Preview" />
+   </children>
+</AnchorPane>

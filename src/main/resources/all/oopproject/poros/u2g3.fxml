@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="all.oopproject.poros.U2g3">
+   <children>
+      <Label fx:id="titleLabel" layoutX="50.0" layoutY="31.0" text="Approve Stock Dispatch" />
+      <Button layoutX="50.0" layoutY="61.0" mnemonicParsing="false" onAction="#dispatchApprovalMenuButton" text="Dispatch Approval" />
+      <Label fx:id="verifyOrderLabel" layoutX="50.0" layoutY="98.0" text="Verify Delivery Order" />
+      <TextField fx:id="orderIdField" layoutX="50.0" layoutY="129.0" text="delivery order ID" />
+      <Button layoutX="50.0" layoutY="175.0" mnemonicParsing="false" onAction="#verifyOrderButton" text="Verify Order" />
+      <Label fx:id="availableStockLabe" layoutX="50.0" layoutY="216.0" text="Available Stock" />
+      <TableView layoutX="164.0" layoutY="175.0" prefHeight="200.0" prefWidth="150.0">
+        <columns>
+          <TableColumn fx:id="stockFuelTypeColumn" prefWidth="75.0" text="Fuel Type" />
+          <TableColumn fx:id="stockQuantityColumn" prefWidth="75.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <Label fx:id="approveQuantityLabel" layoutX="35.0" layoutY="242.0" text="Approve Quantity" />
+      <TextField layoutX="214.0" layoutY="36.0" text="approved quantity" />
+      <Button layoutX="248.0" layoutY="94.0" mnemonicParsing="false" onAction="#approveDispatchButton" text="Approve Dispatch" />
+      <Button layoutX="397.0" layoutY="117.0" mnemonicParsing="false" onAction="#updateDispatchRecordButton" text="Update Dispatch Record" />
+      <Label fx:id="updateStatusLabel" layoutX="422.0" layoutY="179.0" text=" dispatch update confirmation/" />
+      <Button layoutX="422.0" layoutY="221.0" mnemonicParsing="false" onAction="#notifyDistributionOfficerButton" text="&quot;Notify Distribution Officer" />
+      <Label fx:id="notificationStatusLabel" layoutX="416.0" layoutY="275.0" text="notification confirmation" />
+   </children>
+</AnchorPane>

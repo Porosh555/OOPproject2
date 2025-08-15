@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="428.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="all.oopproject.poros.U1g8">
+   <children>
+      <Label fx:id="titleLabel" layoutX="151.0" layoutY="14.0" text="Monitor Driver Performance">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="240.0" layoutY="55.0" mnemonicParsing="false" onAction="#driverPerformanceMenuButton" text="Driver Performance" />
+      <Label fx:id="deliveryLogsLabel" layoutX="263.0" layoutY="91.0" text="Delivery Logs" />
+      <TableView fx:id="deliveryLogsTable" layoutX="42.0" layoutY="121.0" prefHeight="200.0" prefWidth="316.0">
+        <columns>
+          <TableColumn fx:id="logIdColumn" prefWidth="75.0" text="Log ID" />
+          <TableColumn fx:id="transactionDateColumn" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="transactionTypeColumn" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="transactionQuantityColumn" prefWidth="75.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <Label fx:id="findingsLabel" layoutX="428.0" layoutY="91.0" text="Investigation Findings" />
+      <TextArea fx:id="findingsTextArea" layoutX="386.0" layoutY="120.0" prefHeight="206.0" prefWidth="200.0" />
+      <Button layoutX="129.0" layoutY="339.0" mnemonicParsing="false" onAction="#adjustRecordsButton" text="Adjust Records" />
+      <Label fx:id="adjustmentStatusLabel" layoutX="101.0" layoutY="380.0" text="adjustment confirmation/status" />
+      <Button layoutX="306.0" layoutY="339.0" mnemonicParsing="false" onAction="#submitResolutionReportButton" text="Submit Resolution Report" />
+      <Label fx:id="reportStatusLabel" layoutX="299.0" layoutY="378.0" text="report submission confirmation/status" />
+   </children>
+</AnchorPane>

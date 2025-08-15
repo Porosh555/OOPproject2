@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="all.oopproject.poros.U2G4">
+   <children>
+      <Label fx:id="titleLabel" layoutX="40.0" layoutY="38.0" text="Conduct Regular Stock Audits" />
+      <Label fx:id="scheduleAuditLabel" layoutX="40.0" layoutY="71.0" text="Schedule Audit Date" />
+      <DatePicker fx:id="auditDatePicker" layoutX="32.0" layoutY="103.0" promptText="select audit date" />
+      <Button fx:id="fetchPreviousAuditsButton" layoutX="32.0" layoutY="147.0" mnemonicParsing="false" text="Fetch Previous Audit Records" />
+      <Label fx:id="previousAuditsLabel" layoutX="230.0" layoutY="47.0" text="Previous Audit Records" />
+      <TableView fx:id="previousAuditsTable" layoutX="32.0" layoutY="186.0" prefHeight="200.0" prefWidth="290.0">
+        <columns>
+          <TableColumn fx:id="auditIdColumn" prefWidth="75.0" text="Audit ID" />
+          <TableColumn fx:id="auditDateColumn" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="auditorNameColumn" prefWidth="75.0" text="Auditor" />
+            <TableColumn fx:id="discrepancyCountColumn" prefWidth="75.0" text="Discrepancies" />
+        </columns>
+      </TableView>
+      <Label fx:id="compareStockLabel" layoutX="238.0" layoutY="71.0" text="&quot;Compare Physica" />
+      <TableView fx:id="stockComparisonTable" layoutX="334.0" layoutY="173.0" prefHeight="200.0" prefWidth="307.0">
+        <columns>
+          <TableColumn fx:id="fuelTypeColumn" prefWidth="75.0" text="Fuel Type" />
+          <TableColumn fx:id="physicalCountColumn" prefWidth="75.0" text="Physical Count" />
+            <TableColumn fx:id="ystemCountColumn" prefWidth="75.0" text="System Count" />
+            <TableColumn fx:id="differenceColumn" prefWidth="75.0" text="Difference" />
+        </columns>
+      </TableView>
+      <Label fx:id="recordDiscrepanciesLabel" layoutX="256.0" layoutY="120.0" text="Record Discrepancies" />
+      <TextArea layoutX="377.0" layoutY="32.0" prefHeight="46.0" prefWidth="200.0" text="enter discrepancies" />
+      <Button fx:id="submitAuditReportButton" layoutX="385.0" layoutY="90.0" mnemonicParsing="false" text="Submit Final Audit Report" />
+      <Label fx:id="reportStatusLabel" layoutX="417.0" layoutY="138.0" text="report submission confirmation" />
+   </children>
+</AnchorPane>

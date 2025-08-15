@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="all.oopproject.poros.U1g2"
-            prefHeight="400.0" prefWidth="600.0" >
 
+<AnchorPane prefHeight="564.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="all.oopproject.poros.U1g2">
+   <children>
+      <Label layoutX="259.0" text="Assign Delivery Vehicles">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="73.0" layoutY="52.0" mnemonicParsing="false" onAction="#assignVehiclesButton" text="Assign Vehicles" />
+      <Label fx:id="availableVehiclesLabel" layoutX="236.0" layoutY="56.0" text="Available Vehicles" />
+      <TableView fx:id="availableVehiclesTable" layoutX="22.0" layoutY="115.0" prefHeight="200.0" prefWidth="456.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Vehicle ID" />
+          <TableColumn prefWidth="75.0" text="Capacity" />
+            <TableColumn prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label fx:id="ordersLabel" layoutX="25.0" layoutY="335.0" text="Delivery Orders" />
+      <TableView fx:id="ordersTable" layoutX="22.0" layoutY="364.0" prefHeight="200.0" prefWidth="456.0">
+        <columns>
+          <TableColumn fx:id="orderIdColumn" prefWidth="75.0" text="Order ID" />
+          <TableColumn fx:id="orderRequiredCapacityColumn" prefWidth="146.4000244140625" text="Required Capacity" />
+            <TableColumn fx:id="orderAssignedVehicleColumn" minWidth="0.0" prefWidth="145.5999755859375" text="Assigned Vehicle" />
+        </columns>
+      </TableView>
+      <Label fx:id="assignDriverLabel" layoutX="603.0" layoutY="56.0" text="Assign Driver" />
+      <ComboBox fx:id="driverSelectorCB" layoutX="535.0" layoutY="103.0" prefHeight="26.0" prefWidth="199.0" promptText="Select driver &amp; vehicle" />
+      <Button layoutX="582.0" layoutY="150.0" mnemonicParsing="false" onAction="#saveAssignmentsButtonOA" text="Save Assignments" />
+      <Label fx:id="confirmationLabel" layoutX="576.0" layoutY="197.0" text="confirmation message" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
 </AnchorPane>

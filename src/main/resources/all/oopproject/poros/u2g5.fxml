@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="all.oopproject.poros.U2g5">
+   <children>
+      <Label fx:id="titleLabel" layoutX="55.0" layoutY="36.0" text="&quot;Maintain Fuel Quality Records" />
+      <Label fx:id="newLabTestLabel" layoutX="345.0" layoutY="36.0" text="Enter New Lab Test Results" />
+      <Button layoutX="75.0" layoutY="86.0" mnemonicParsing="false" onAction="#qualityRecordsMenuButton" text="Quality Records" />
+      <TextField fx:id="batchNumberField" layoutX="62.0" layoutY="134.0" text="batch number " />
+      <TextField fx:id="testResultField" layoutX="62.0" layoutY="231.0" text="test result value" />
+      <TextField fx:id="testDateField" layoutX="62.0" layoutY="187.0" text="test date" />
+      <Button layoutX="62.0" layoutY="288.0" mnemonicParsing="false" onAction="#verifyComplianceButton" text="Verify Compliance" />
+      <Label fx:id="flagStatusLabel" layoutX="345.0" layoutY="77.0" text="compliance check status" />
+      <Button layoutX="358.0" layoutY="122.0" mnemonicParsing="false" onAction="#flagNonCompliantButton" text="Flag Non-Compliant Batch" />
+      <Label fx:id="flagStatusLabel" layoutX="365.0" layoutY="178.0" text="flagging confirmation" />
+      <Button layoutX="360.0" layoutY="213.0" mnemonicParsing="false" onAction="#saveQualityRecordButton" text="Save Quality Record" />
+      <Label fx:id="saveStatusLabel" layoutX="358.0" layoutY="270.0" text="save confirmation" />
+   </children>
+</AnchorPane>
