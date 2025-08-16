@@ -1,5 +1,7 @@
 package all.oopproject.poros;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -30,15 +32,19 @@ public class U1g3
     @javafx.fxml.FXML
     private TableColumn<Vehicle, String> delayedVehicleColumn;
 
+    private final ObservableList<DeliveryOrder> delayedDeliveries = FXCollections.observableArrayList();
+
+
     private final ArrayList<DeliveryOrder> orderids = new ArrayList<>();
     private final ArrayList<DeliveryOrder> vehiclenames = new ArrayList<>();
-    private final ArrayList<DeliveryOrder> delayedDeliveries = new ArrayList<>();
+    //private final ArrayList<DeliveryOrder> delayedDeliveries = new ArrayList<>();
     @javafx.fxml.FXML
     public void initialize() {
         delayedOrderIdColumn.setCellValueFactory(new PropertyValueFactory<>(" order id"));
         delayedVehicleColumn1.setCellValueFactory(new PropertyValueFactory<>("vehicle name"));
         delayedVehicleColumn.setCellValueFactory(new PropertyValueFactory<>("delayedDeliveries"));
 
+        delayedDeliveriesTable.setItems(delayedDeliveries);
 
 
     }
@@ -47,6 +53,7 @@ public class U1g3
     public void trackDeliveriesButtonOA(ActionEvent actionEvent) {
         delayedDeliveriesTable.getItems().clear();
         delayedDeliveriesTable.getItems().addAll(delayedDeliveries);
+        delayedDeliveriesTable.refresh();
 
 
     }
